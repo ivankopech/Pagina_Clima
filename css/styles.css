@@ -1,0 +1,75 @@
+/* .flex-container{
+    display: flex;
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+} */
+
+.flex-container {
+    display: flex;
+    background-color:  #e6e6e6;
+  }
+  
+  .flex-container > div {
+    background-color: rgb(236, 235, 235);
+    /* margin: 10px; */
+    padding: 10px; 
+    font-size: 30px; 
+  }
+
+
+.general-izquierda{
+    flex-grow: 3;
+}
+.flex-container .general-izquierda{
+    background-color: white
+}
+
+.div-h4{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
+.especifico-derecha{
+    flex-grow: 7;
+}
+
+.dias-semana{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.dias-semana > div {
+    background-color: #ffffff;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+
+    border-radius: 8px;
+}
+
+.cuadrados-especificaciones{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.cuadrados-especificaciones > div{
+    background-color: #ffffff;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    line-height: 190px;
+    font-size: 30px;
+
+    border-radius: 8px;
+}
+
+.todays-highlights{
+    font-weight: bold;
+}
