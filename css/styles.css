@@ -13,6 +13,9 @@
 .flex-container {
     display: flex;
     background-color:  #e6e6e6;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    
   }
   
   .flex-container > div {
