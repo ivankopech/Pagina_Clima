@@ -150,17 +150,119 @@ p.lluvia {
     padding-top: 1em;
 }
 
+/* PANEL DERECHO */
 
 .especifico-derecha{
     flex-grow: 7;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 70%;     
+    padding: 1%;
 }
 
-.dias-semana{
+.fechas-grados-usuario{
+    margin: 5px 10px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.today-week{
+    display: flex;
+    flex-direction: row;
+}
+.semana{
+    margin-left: 20px;
+    font-size: 1em;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
-.dias-semana > div {
+.semana, .hoy{
+    font-size: 1.3em;
+    padding-top: 12px;
+}
+
+.grados-usuario{
+    align-items: center;
+}
+
+.usuario{
+    width: 50px;
+    height: 50px;
+    padding-left: 30px;
+}
+
+.centigrados, .fahrenheit{
+    width: 40px;
+    height: 40px;
+    padding-right: 5px;
+}
+
+/* CLIMA 7 DIAS */
+
+.fechas-grados-usuario div p, .maxima-minima-diaria p{
+    margin-top: 0%;
+}
+
+.clima-por-dia{
+    display: flex;
+    display: inline-block;
+    flex-direction: column;
+    background-color: white;
+    margin: 0.5%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1%;
+    border-radius: 15px;
+    width: 10%;
+}
+
+
+
+.maxima{
+    padding-right: 3%;
+}
+
+.clima-por-dia img{
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+
+
+
+/* .dias-semana-clima{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0.5%;
+    padding: 0.5%;
+    border-radius: 20px;
+    width: 12%;
+    font-size: 1em;
+}
+
+.dias-semana-clima img{
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+.maxima-minima-diaria{
+    margin-top: 0%;
+}
+
+.maxima{
+    padding-right: 3%;
+}
+*/
+/* .dias-semana-clima > div {
     background-color: #ffffff;
     width: 100px;
     margin: 10px;
@@ -169,7 +271,7 @@ p.lluvia {
     font-size: 30px;
 
     border-radius: 8px;
-}
+}  */
 
 .cuadrados-especificaciones{
     display: flex;
@@ -189,4 +291,30 @@ p.lluvia {
 
 .todays-highlights{
     font-weight: bold;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1200px)
+{
+    .especifico-derecha{
+        width: 100%;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 40px;
+    }
+}
+@media (max-width: 800px)
+{
+    .clima-por-dia{
+        align-content: center;
+        width: 20%;
+        margin: 2.7%;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .clima-por-dia{
+        width: 40%;
+    }
 }
