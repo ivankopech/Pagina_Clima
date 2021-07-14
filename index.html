@@ -9,43 +9,45 @@
 </head>
 <body>
     <div class="flex-container">
-        <div class="general-izquierda">
-            <div class="buscar">
-                <img src="img/buscar.png" alt="B" id="Buscar"> 
-                <input class="busqueda" type="text" placeholder="Search for places..."> 
+    
+            <div class="general-izquierda">
+                <div class="buscar">
+                    <img src="img/buscar.png" alt="B" id="Buscar"> 
+                    <input class="busqueda" type="text" placeholder="Search for places..."> 
+                    
+                    <img src="img/calcelar.png" alt="C" id="Cancelar">
+                </div>
+                <br>
+    
+                <div class="datosPrecargados">
+                    <img src="img/nublado.png" alt="" class="climaPrecargado">
+                    <p class="grados">12°C</p>
+                    <div class="dia-hora">
+                        <p class="dia">Monday, 16:00 </p>
+                        <!-- <p class="hora">16:00</p> -->
+                    </div>
+                </div>
+                <div class="datosClima">
+                    <div class="clima-nublado">
+                        <img src="img/nublado.png" alt="" class="actual">
+                        <p class="descripcion">Mostly Cloudy</p>
+                    </div>
+                    <div class="clima">
+                        <img src="img/lluvia.png" alt="">
+                        <p class="lluvia">Rain - 30% </p>
+                    </div>
+                </div>
+    
+                <div class="ciudad">
+                    <img src="img/ciudad.jpg" alt="">
+                    <div class="ciudad-imagen"> Ciudad </div>
+                    <div class="centrado"></div>
+                    <p></p>
+                </div>
                 
-                <img src="img/calcelar.png" alt="C" id="Cancelar">
-                <input type="submit" value="search" class="lupa">
+    
             </div>
-            <br>
-
-            <div class="datosPrecargados">
-                <img src="img/nublado.png" alt="" class="climaPrecargado">
-                <p class="grados">12°C</p>
-                <div class="dia-hora">
-                    <p class="dia">Monday, 16:00 </p>
-                    <!-- <p class="hora">16:00</p> -->
-                </div>
-            </div>
-            <div class="datosClima">
-                <div class="clima-nublado">
-                    <img src="img/nublado.png" alt="" class="actual">
-                    <p class="descripcion">Mostly Cloudy</p>
-                </div>
-                <div class="clima">
-                    <img src="img/lluvia.png" alt="">
-                    <p class="lluvia">Rain - 30% </p>
-                </div>
-            </div>
-
-            <div class="ciudad">
-                <p class="ciudad-imagen">Ciudad</p>
-            </div>
-            
-            <hr>
-
-
-        </div>
+                
 
         <section class="especifico-derecha">
             <div class="fechas-grados-usuario">
@@ -54,8 +56,8 @@
                     <p class="semana">Week</p>
                 </div>
                 <div class="grados-usuario">
-                    <img src="img/centigrados.png" alt="" class="centigrados">
-                    <img src="img/fahrenheit.png" alt="" class="fahrenheit">
+                    <a class="cenigrados" href="">°C</a>
+                    <a class="fahrenheit" href="">°F</a>
                     <img src="img/usuario.png" alt="" class="usuario">
                 </div>
             </div>
@@ -69,7 +71,7 @@
                         <p>Sun</p>
                         <img src="img/soleado.png">
                         <div class="maxima-minima-diaria">
-                            <p id="degree" class="maxima">Maxima: 15°</p> <p id="degree" class="minima">Minima: 3°</p>
+                            <p id="degree0" class="maxima">Maxima: 15°</p> 
                         </div>
                 </div>
                 
@@ -78,7 +80,7 @@
                     <p>Mon</p>
                     <img src="img/nublado.png">
                     <div class="maxima-minima-diaria">
-                        <p id="degree" class="maxima">Maxima: 12°</p> <p id="degree" class="minima">Minima: 7°</p>
+                        <p id="degree1" class="maxima">Maxima: 12°</p> 
                     </div>
                 </div>
 
@@ -87,7 +89,7 @@
                     <p>Tue</p>
                     <img src="img/lluvia.png">
                     <div class="maxima-minima-diaria">
-                        <p id="degree" class="maxima">Maxima: 9°</p> <p id="degree" class="minima">Minima: 7°</p>
+                        <p id="degree2" class="maxima">Maxima: 9°</p> 
                     </div>
                 </div>
 
@@ -96,7 +98,7 @@
                     <p>Wed</p>
                     <img src="img/lluvia.png">
                     <div class="maxima-minima-diaria">
-                        <p id="degree" class="maxima">Maxima: 8°</p> <p id="degree" class="minima">Minima: -1°</p>
+                        <p id="degree3" class="maxima">Maxima: 8°</p> 
                     </div>
                 </div>
 
@@ -105,7 +107,7 @@
                     <p>Thu</p>
                     <img src="img/nieve.png" alt="">
                     <div class="maxima-minima-diaria">
-                        <p id="degree" class="maxima">Maxima: 5°</p> <p id="degree" class="minima">Minima: -2°</p>
+                        <p id="degree4" class="maxima">Maxima: 5°</p> 
                     </div>
                 </div>
 
@@ -114,7 +116,7 @@
                     <p>Fri</p>
                     <img src="img/nublado.png" alt="">
                     <div class="maxima-minima-diaria">
-                        <p id="degree" class="maxima">Maxima: 4°</p> <p id="degree" class="minima">Minima: -4°</p>
+                        <p id="degree5" class="maxima">Maxima: 4°</p> 
                     </div>
                 </div>
 
@@ -123,7 +125,7 @@
                      <p>Sat</p>
                      <img src="img/soleado.png" alt="">
                      <div class="maxima-minima-diaria">
-                         <p id="degree" class="maxima">Maxima: 3°</p> <p id="degree" class="minima">Minima: -3°</p>
+                         <p id="degree6" class="maxima">Maxima: 3°</p> 
                      </div>
                 </div>
                     

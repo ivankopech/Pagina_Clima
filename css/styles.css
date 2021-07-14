@@ -13,8 +13,11 @@
 .flex-container {
     display: flex;
     background-color:  #e6e6e6;
+    padding: 3px;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
     
   }
   
@@ -24,6 +27,7 @@
     padding: 10px; 
     font-size: 30px; 
   }
+
 
 
 .general-izquierda{
@@ -137,21 +141,36 @@ p.lluvia {
 /* NOMBRE CIUDAD Y FOTO */
 
 .ciudad{
-    display: flex;
-    align-items: flex-end;
+    position: relative;
+    display: inline-block;
     text-align: center;
+    /* display: flex;
+    
+    text-align: center; */
 }
 
-.ciudad p{
-    /* color: white; */
-    background-image: url(img/rosario.jfif);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 10px;
-    width: 100%;
-    height: 2em;
-    padding-top: 1em;
+.ciudad img{
+    height: 50%;
+    width: 90%;
 }
+
+.ciudad-imagen{
+    /* display: flex; */
+    position: top;
+    top: 10px;
+    left: 10px;
+}
+
+
+.centrado{
+    position: top;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 /* PANEL DERECHO */
 
@@ -193,6 +212,26 @@ p.lluvia {
     align-items: center;
 }
 
+.grados-usuario a{
+    font-size: 20px;
+    color:white;
+    border-radius: 100px;
+    background-color: rgb(0, 0,0);
+    padding: 9px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.grados-usuario img {
+    float: right;
+    
+}
+
+.grados-usuario a.fahrenheit {
+    background-color: white;
+    color: black;
+    border-style: solid;
+}
+
 .usuario{
     width: 50px;
     height: 50px;
@@ -231,9 +270,9 @@ p.lluvia {
 }
 
 .clima-por-dia img{
-    width: 50%;
-    height: auto;
-    margin: auto;
+    width: 90%;
+    height: 50%;
+    
 }
 
 
@@ -330,12 +369,65 @@ p.dato{
         border-bottom-left-radius: 40px;
     }
 }
-@media (max-width: 800px)
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px)
 {
+    .general-izquierda{
+        width: 30%;
+    }
+
+    .especifico-derecha div{
+        width: 70%;
+        
+    }
+
+    /* .flex-container section.especifico-derecha{
+        flex-direction: column;
+		justify-content: center;
+		align-items: center;
+    }
+
+    .especifico-derecha{
+        flex-direction: column;
+		justify-content: center;
+		align-items: center;
+    } */
     .clima-por-dia{
+        
         align-content: center;
         width: 20%;
         margin: 2.7%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .flex-conteiner{
+        flex-direction: row;
+		justify-content: center;
+		align-items: center;
+    }
+
+    .cuadrados-especificaciones{
+        flex-direction: row;
+		justify-content: center;
+		align-items: center;
+    }
+
+    .general-izquierda{
+        flex-direction: row;
+		justify-content: center;
+		align-items: center;
+        width: 80%;
+    }
+
+    .especifico-derecha{
+        width: 80%;
+        flex-direction: row;
+		justify-content: center;
+		align-items: center;
     }
 }
 

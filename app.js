@@ -1,16 +1,18 @@
-var buscar = document.querySelector('.lupa');
+var buscar = document.querySelector('#Buscar');
 var grados = document.querySelector('.grados');
 var tempMaxima = document.querySelector('.temp-maxima');
 var tempMinima = document.querySelector('.temp-minima');
 var texto = document.querySelector('.busqueda');
 var clima = document.querySelector('.descripcion');
 var fecha = document.querySelector('.dia');
-var viento = document.querySelector('.viento');
+var viento = document.querySelector('.viento'); 
 var amanecer = document.querySelector('.amanecer');
 var atardecer = document.querySelector('.anochecer');
 var presion = document.querySelector('.presion');
 var humedad = document.querySelector('.humedad');
 var visibilidad = document.querySelector('.visibilidad');
+var nombre = document.querySelector('.ciudad-imagen');
+var lluvia = document.querySelector('.lluvia');
 
 buscar.addEventListener('click', climaHoy);
 
@@ -23,7 +25,8 @@ function climaHoy(){
         var climaValor = data.list[0].weather[0].description;
         var vientoValor = data.list[0].wind.speed;
 
-
+        var ciudadValor = data.city.name;
+        var lluviaValor = data.list[0].rain;
         var amanecerValor = data.city.sunrise;
         var atardecerValor = data.city.sunset;
         var amanecerFecha = new Date(amanecerValor * 1000);
@@ -47,6 +50,8 @@ function climaHoy(){
         var lat = data.city.coord.lat;
         var lon = data.city.coord.lon;
 
+        nombre.innerHTML = ciudadValor;
+        lluvia.innerHTML = lluviaValor + '%';
         grados.innerHTML = gradosValor + '°C';
         clima.innerHTML = climaValor;
         viento.innerHTML = vientoValor + ' km/h';
@@ -71,9 +76,18 @@ function climaSemanal(lat, lon){
     .then(data => {
         console.log(data);
         data.daily.forEach(function(informacion, indice) {
-            let hoyTemperatura = document.getElementById('degree'+ indice);
-            let temperatura = (informacion.main.temp.day).toString(); 
-            hoyTemperatura.innerHTML = temperatura + '°C';
+
+            for (let i = 0; i <= 6; i++) {
+                var hoyTemperatura = document.querySelector('#degree'+ i);
+                    var temperatura = (informacion.temp.day).toString(); 
+                    hoyTemperatura.innerHTML = temperatura + '°C';    
+                
+            }
+            // var hoyTemperatura = document.querySelector('#degree'+ indice);
+            // var temperatura = (informacion.temp.day).toString(); 
+            // hoyTemperatura.innerHTML = temperatura + '°C';
+            
         })
     })
 }
+ 
