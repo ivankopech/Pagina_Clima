@@ -76,16 +76,10 @@ function climaSemanal(lat, lon){
     .then(data => {
         console.log(data);
         data.daily.forEach(function(informacion, indice) {
-
-            for (let i = 0; i <= 6; i++) {
-                var hoyTemperatura = document.querySelector('#degree'+ i);
-                    var temperatura = (informacion.temp.day).toString(); 
-                    hoyTemperatura.innerHTML = temperatura + '°C';    
-                
-            }
-            // var hoyTemperatura = document.querySelector('#degree'+ indice);
-            // var temperatura = (informacion.temp.day).toString(); 
-            // hoyTemperatura.innerHTML = temperatura + '°C';
+            
+            var hoyTemperatura = document.querySelector('#degree'+ indice);
+            var temperatura = (informacion.temp.day).toString(); 
+            hoyTemperatura.innerHTML = temperatura + '°C';
             
         })
     })
