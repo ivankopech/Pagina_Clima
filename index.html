@@ -13,7 +13,9 @@
             <div class="buscar">
                 <img src="img/buscar.png" alt="B" id="Buscar"> 
                 <input class="busqueda" type="text" placeholder="Search for places..."> 
+                
                 <img src="img/calcelar.png" alt="C" id="Cancelar">
+                <input type="submit" value="search" class="lupa">
             </div>
             <br>
 
@@ -65,36 +67,36 @@
                 <div class="clima-por-dia">
                         <!-- dia 1 -->
                         <p>Sun</p>
-                        <img src="img/soleado.png" alt="">
+                        <img src="img/soleado.png">
                         <div class="maxima-minima-diaria">
-                            <p class="maxima">Maxima: 15°</p> <p class="minima">Minima: 3°</p>
+                            <p id="grados" class="maxima">Maxima: 15°</p> <p id="grados" class="minima">Minima: 3°</p>
                         </div>
                 </div>
                 
                 <div class="clima-por-dia">
                     <!-- dia 2 -->
                     <p>Mon</p>
-                    <img src="img/nublado.png" alt="">
+                    <img src="img/nublado.png">
                     <div class="maxima-minima-diaria">
-                        <p class="maxima">Maxima: 12°</p> <p class="minima">Minima: 7°</p>
+                        <p id="grados" class="maxima">Maxima: 12°</p> <p id="grados" class="minima">Minima: 7°</p>
                     </div>
                 </div>
 
                 <div class="clima-por-dia">
                     <!-- dia 3 -->
                     <p>Tue</p>
-                    <img src="img/lluvia.png" alt="">
+                    <img src="img/lluvia.png">
                     <div class="maxima-minima-diaria">
-                        <p class="maxima">Maxima: 9°</p> <p class="minima">Minima: 7°</p>
+                        <p id="grados" class="maxima">Maxima: 9°</p> <p id="grados" class="minima">Minima: 7°</p>
                     </div>
                 </div>
 
                 <div class="clima-por-dia">
                     <!-- dia 4 -->
                     <p>Wed</p>
-                    <img src="img/lluvia.png" alt="">
+                    <img src="img/lluvia.png">
                     <div class="maxima-minima-diaria">
-                        <p class="maxima">Maxima: 8°</p> <p class="minima">Minima: -1°</p>
+                        <p id="grados" class="maxima">Maxima: 8°</p> <p id="grados" class="minima">Minima: -1°</p>
                     </div>
                 </div>
 
@@ -103,7 +105,7 @@
                     <p>Thu</p>
                     <img src="img/nieve.png" alt="">
                     <div class="maxima-minima-diaria">
-                        <p class="maxima">Maxima: 5°</p> <p class="minima">Minima: -2°</p>
+                        <p id="grados" class="maxima">Maxima: 5°</p> <p id="grados" class="minima">Minima: -2°</p>
                     </div>
                 </div>
 
@@ -112,7 +114,7 @@
                     <p>Fri</p>
                     <img src="img/nublado.png" alt="">
                     <div class="maxima-minima-diaria">
-                        <p class="maxima">Maxima: 4°</p> <p class="minima">Minima: -4°</p>
+                        <p id="grados" class="maxima">Maxima: 4°</p> <p id="grados" class="minima">Minima: -4°</p>
                     </div>
                 </div>
 
@@ -121,7 +123,7 @@
                      <p>Sat</p>
                      <img src="img/soleado.png" alt="">
                      <div class="maxima-minima-diaria">
-                         <p class="maxima">Maxima: 3°</p> <p class="minima">Minima: -3°</p>
+                         <p id="grados" class="maxima">Maxima: 3°</p> <p id="grados" class="minima">Minima: -3°</p>
                      </div>
                 </div>
                     
@@ -138,11 +140,11 @@
                         <div>
                             <div class="especificoImagenes">
                                 <img src="img/temp-maxima.jpg" alt="">
-                                <p class="dato">Max</p>
+                                <p class="temp-maxima">Max</p>
                             </div>
                             <div class="especificoImagenes">
                                 <img src="img/temp-minima.png" alt="">
-                                <p class="dato">Min</p>
+                                <p class="temp-minima">Min</p>
                             </div>
                         
                         </div>
@@ -153,11 +155,11 @@
                         <div>
                             <div class="especificoImagenes">
                                 <img src="img/amanecer.jpg" alt="">
-                                <p class="dato">Sunrise</p>
+                                <p class="amanecer">Sunrise</p>
                             </div>
                             <div class="especificoImagenes">
                                 <img src="img/anochecer.png" alt="">
-                                <p class="dato">Sunset</p>
+                                <p class="anochecer">Sunset</p>
                             </div>
                         </div>
                     </div>
@@ -167,7 +169,7 @@
                         <div>   
                             <div class="especificoImagenes">
                                 <img src="img/humedas.jpg" alt="">
-                                <p class="dato">Humidity</p>
+                                <p class="humedad">Humidity</p>
                             </div>
                         </div>
                     </div>
@@ -177,7 +179,7 @@
                         <div>
                             <div class="especificoImagenes">
                                 <img src="img/viento.png" alt="">
-                                <p class="dato">wind</p>
+                                <p class="viento">wind</p>
                             </div>
                         </div>
                     </div>
@@ -197,7 +199,7 @@
                         <div>
                             <div class="especificoImagenes">
                                 <img src="img/visibilidad.png" alt="">
-                                <p class="dato">Visibility</p>
+                                <p class="visibilidad">Visibility</p>
                             </div>
                         </div>
                     </div>
