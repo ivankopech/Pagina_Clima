@@ -57,24 +57,23 @@ function climaHoy(){
         tempMaxima.innerHTML = tempMaximaValor + 'C°';
         tempMinima.innerHTML = tempMinimaValor + 'C°';
         visibilidad.innerHTML = visibilidadValor + ' m';
-        fecha.innerHTML = dia +'-'+ mes +'-'+ año;
-        climaFuturo(lat, lon);
+        fecha.innerHTML = dia + '/' + mes + '/' + año;
+        climaSemanal(lat, lon);
         
     })
 
-.catch(error => alert("No existe la ciudad o no se encuentra registrado en la API"));
+.catch(error => alert("Se produjo un error al buscar esa ciudad"));
 }
 
-
-function climaFuturo(lat, lon){
+function climaSemanal(lat, lon){
     fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat +'&lon=' + lon + '&units=metric&appid=1dfce91cad2e917bc5d3ca4b9ad60418')
     .then(response => response.json())
     .then(data => {
         console.log(data);
         data.daily.forEach(function(informacion, indice) {
-            let gradoHoy = document.querySelector('#degree'+ indice);
-            let grado = (informacion.temp.day).toString(); 
-            gradoHoy.innerHTML = grado + '°C';
+            let hoyTemperatura = document.getElementById('degree'+ indice);
+            let temperatura = (informacion.main.temp.day).toString(); 
+            hoyTemperatura.innerHTML = temperatura + '°C';
         })
     })
 }
