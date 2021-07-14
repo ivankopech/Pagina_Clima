@@ -403,6 +403,29 @@ p.dato{
     }
 }
 
+@media screen and (max-width: 770px) {
+    .flex-conteiner{
+        flex-direction: row;
+		justify-content: center;
+		align-items: center;
+    }
+
+    .general-izquierda{
+        flex-direction: column;
+		justify-content: center;
+		align-items: center;
+        width: 80%;
+    }
+
+    .flex-container section.especifico-derecha{
+        width: 80%;
+        flex-direction: column;
+		justify-content: center;
+		align-items: center;
+    }
+}
+
+
 @media screen and (max-width: 470px) {
     .flex-conteiner{
         flex-direction: row;
@@ -417,15 +440,15 @@ p.dato{
     }
 
     .general-izquierda{
-        flex-direction: row;
+        flex-direction: column;
 		justify-content: center;
 		align-items: center;
         width: 80%;
     }
 
-    .especifico-derecha{
+    section.especifico-derecha{
         width: 80%;
-        flex-direction: row;
+        flex-direction: column;
 		justify-content: center;
 		align-items: center;
     }
