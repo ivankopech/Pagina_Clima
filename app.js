@@ -65,16 +65,6 @@ function climaHoy(){
 .catch(error => alert("No existe la ciudad o no se encuentra registrado en la API"));
 }
 
-// function datosSemanales(lat, lon){
-//     const response = fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+ lat + '&lon=' + lon + '&units=metric&appid=834c2ae38cefdca512c2bfc5629669b7')
-//     const data =  response.json();
-//     console.log(data);
-//         data.daily.forEach(function(infoDiaria, indice) {
-//             let gradoActual = document.getElementById('grados' + indice);
-//             let grado = (infoDiaria.temp.day).toString(); 
-//             gradoActual.innerHTML = grado + '°C';
-//         })
-// }
 
 function climaFuturo(lat, lon){
     fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat +'&lon=' + lon + '&units=metric&appid=1dfce91cad2e917bc5d3ca4b9ad60418')
@@ -82,7 +72,7 @@ function climaFuturo(lat, lon){
     .then(data => {
         console.log(data);
         data.daily.forEach(function(informacion, indice) {
-            let gradoHoy = document.querySelector('#grados'+ indice);
+            let gradoHoy = document.querySelector('#degree'+ indice);
             let grado = (informacion.temp.day).toString(); 
             gradoHoy.innerHTML = grado + '°C';
         })
