@@ -26,7 +26,7 @@ function climaHoy(){
         var vientoValor = data.list[0].wind.speed;
 
         var ciudadValor = data.city.name;
-        var lluviaValor = data.list[0].rain;
+        var lluviaValor = data.list[0].clouds.all;
         var amanecerValor = data.city.sunrise;
         var atardecerValor = data.city.sunset;
         var amanecerFecha = new Date(amanecerValor * 1000);
@@ -76,8 +76,7 @@ function climaSemanal(lat, lon){
     .then(data => {
         console.log(data);
         data.daily.forEach(function(informacion, indice) {
-            
-            var hoyTemperatura = document.querySelector('#degree'+ indice);
+            var hoyTemperatura = document.getElementById('degree'+ indice);
             var temperatura = (informacion.temp.day).toString(); 
             hoyTemperatura.innerHTML = temperatura + '°C';
             

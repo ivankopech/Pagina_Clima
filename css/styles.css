@@ -1,12 +1,3 @@
-/* .flex-container{
-    display: flex;
-    background-color: #f1f1f1;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-} */
 *{
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -23,16 +14,13 @@
   
   .flex-container > div {
     background-color: rgb(236, 235, 235);
-    /* margin: 10px; */
     padding: 10px; 
     font-size: 30px; 
   }
 
 
-
 .general-izquierda{
     flex-grow: 3;
-    /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     border-bottom-left-radius: 40px;
     border-top-left-radius: 40px;
     width: 30%;
@@ -41,8 +29,6 @@
  /* PANEL BUSCAR */
 
 .buscar{
-    /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -144,9 +130,7 @@ p.lluvia {
     position: relative;
     display: inline-block;
     text-align: center;
-    /* display: flex;
     
-    text-align: center; */
 }
 
 .ciudad img{
@@ -155,7 +139,6 @@ p.lluvia {
 }
 
 .ciudad-imagen{
-    /* display: flex; */
     position: top;
     top: 10px;
     left: 10px;
@@ -338,22 +321,6 @@ p.dato{
     width: 20%;
 }
 
-/* .cuadrados-especificaciones{
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-
-.cuadrados-especificaciones > div{
-    background-color: #ffffff;
-    width: 300px;
-    margin: 20px;
-    text-align: center;
-    line-height: 190px;
-    font-size: 30px;
-
-    border-radius: 8px;
-} */
 
 .todays-highlights{
     font-weight: bold;
@@ -375,8 +342,10 @@ p.dato{
 
 @media (max-width: 1200px)
 {
+    
     .general-izquierda{
         width: 30%;
+        
     }
 
     .especifico-derecha div{
@@ -384,53 +353,94 @@ p.dato{
         
     }
 
-    /* .flex-container section.especifico-derecha{
-        flex-direction: column;
-		justify-content: center;
-		align-items: center;
+    .clima-por-dia img{
+        height: 20%;
+        width: 20%;
+
+    }
+    
+    .grados-usuario{
+        flex-direction: row;
     }
 
-    .especifico-derecha{
-        flex-direction: column;
-		justify-content: center;
-		align-items: center;
-    } */
+  
     .clima-por-dia{
-        
-        align-content: center;
+        height: 20%;
         width: 20%;
+        align-content: center;
+        
         margin: 2.7%;
     }
 }
 
 @media screen and (max-width: 770px) {
-    .flex-conteiner{
+    .flex-container{
         flex-direction: row;
-		justify-content: center;
-		align-items: center;
+        border-radius: 0px;
+    }
+    .especificoImagenes img{
+        width: 30%;
+        height: 10%;
     }
 
+    .flex-container{
+        flex-wrap: wrap;
+    }
     .general-izquierda{
-        flex-direction: column;
-		justify-content: center;
-		align-items: center;
         width: 80%;
+        border-radius: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+
     }
 
     .flex-container section.especifico-derecha{
-        width: 80%;
-        flex-direction: column;
-		justify-content: center;
-		align-items: center;
+        /* width: 80%; */
+        margin-top: 10px;
+        border-style: solid;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right:auto;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .clima-por-dia img{
+        height: 20%;
+        width: 20%;
+
+    }
+
+    .grados-usuario{
+        flex-direction: row;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .flex-container{
+        flex-wrap: wrap;
+    }
+
+    .especificoImagenes img{
+        width: 500px;
+        height: 10px;
     }
 }
 
 
 @media screen and (max-width: 470px) {
-    .flex-conteiner{
+    .flex-container{
         flex-direction: row;
 		justify-content: center;
 		align-items: center;
+    }
+
+    .especificoImagenes img{
+        width: 100px;
+        height: 10%;
     }
 
     .cuadrados-especificaciones{
@@ -439,8 +449,19 @@ p.dato{
 		align-items: center;
     }
 
+    .clima-por-dia img{
+        height: 20%;
+        width: 20%;
+
+    }
+
+    .grados-usuario{
+        flex-direction: row;
+    }
+
+
     .general-izquierda{
-        flex-direction: column;
+        flex-direction: row;
 		justify-content: center;
 		align-items: center;
         width: 80%;
@@ -454,9 +475,13 @@ p.dato{
     }
 }
 
-@media (max-width: 450px)
+@media (max-width: 350px)
 {
     .clima-por-dia{
         width: 40%;
+    }
+
+    .grados-usuario{
+        flex-direction: row;
     }
 }
